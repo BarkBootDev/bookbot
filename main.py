@@ -1,13 +1,13 @@
 import sys
-from stats import count_unique_words  
+from stats import book_report 
 
 def main():
     book_local = ""
     if len(sys.argv) < 2:
-        book_local = "books/frankenstein.txt"
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
     else:
-        book_local = sys.argv[1]
-    count_unique_words(book_local)
+        book_report(sys.argv[1])
 
 if __name__ == "__main__":
     main()
